@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintPro - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        /* About Us Section */
+        .about-us {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: white;
+        }
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about-text {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+        }
+        .about-text h2 {
+            font-size: 1.8rem;
+        }
+        .about-text p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Section */
+        .team {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #fff;
+        }
+        .team h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .team-member p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1>About Us</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>PrintPro is a leading printing services provider, dedicated to delivering high-quality prints for businesses and individuals. With over 10 years of experience, we have built a reputation for excellence, reliability, and customer satisfaction.</p>
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide innovative and sustainable printing solutions that meet the unique needs of our clients. We are committed to using eco-friendly materials and cutting-edge technology to deliver exceptional results.</p>
+            </div>
+            <div class="about-image">
+                <img src="dhana.jpg" alt="About Us Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="team11.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Creative Director</p>
+            </div>
+            <div class="team-member">
+                <img src="team3.jpg" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>Printing Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 PrintPro. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

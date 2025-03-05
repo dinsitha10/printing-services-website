@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintPro - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .services h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service-card {
+            flex: 1 1 30%;
+            margin: 1rem;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            color: #ff6f61;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .learn-more {
+            background: #ff6f61;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .service-card .learn-more:hover {
+            background: #e65a50;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="service-container">
+            <div class="service-card" id="business-cards">
+                <i class="fas fa-print fa-3x"></i>
+                <h2>Business Cards</h2>
+                <p>High-quality business cards to make a lasting impression.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="service-card" id="posters-banners">
+                <i class="fas fa-image fa-3x"></i>
+                <h2>Posters & Banners</h2>
+                <p>Vibrant posters and banners for all your events.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="service-card" id="brochures">
+                <i class="fas fa-book fa-3x"></i>
+                <h2>Brochures</h2>
+                <p>Professional brochures to showcase your business.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="service-card" id="labels-stickers">
+                <i class="fas fa-tags fa-3x"></i>
+                <h2>Labels & Stickers</h2>
+                <p>Custom labels and stickers for your products.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="service-card" id="invitations">
+                <i class="fas fa-envelope fa-3x"></i>
+                <h2>Invitations</h2>
+                <p>Elegant invitations for weddings, parties, and events.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="service-card" id="tshirt-printing">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <h2>T-Shirt Printing</h2>
+                <p>Custom t-shirt printing for personal or business use.</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@printpro.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 PrintPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Add click event to each service card
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceId = card.id; // Get the ID of the clicked card
+                window.location.href = `service-${serviceId}.html`; // Redirect to the corresponding page
+            });
+        });
+    </script>
+</body>
+</html>

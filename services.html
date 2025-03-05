@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintPro - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Services Section */
+.services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6f61;
+}
+
+/* Form Styles */
+form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e65a50;
+}
+    </style>
+</head>
+<body>
+    
+
+    <!-- Services Section -->
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="service-container">
+            <!-- Service Card 1: Business Cards -->
+            <div class="service-card" data-modal="modal1">
+                <i class="fas fa-print fa-3x"></i>
+                <h2>Business Cards</h2>
+                <p>High-quality business cards to make a lasting impression.</p>
+            </div>
+
+            <!-- Service Card 2: Posters & Banners -->
+            <div class="service-card" data-modal="modal2">
+                <i class="fas fa-image fa-3x"></i>
+                <h2>Posters & Banners</h2>
+                <p>Vibrant posters and banners for all your events.</p>
+            </div>
+
+            <!-- Service Card 3: Brochures -->
+            <div class="service-card" data-modal="modal3">
+                <i class="fas fa-book fa-3x"></i>
+                <h2>Brochures</h2>
+                <p>Professional brochures to showcase your business.</p>
+            </div>
+
+            <!-- Service Card 4: Labels & Stickers -->
+            <div class="service-card" data-modal="modal4">
+                <i class="fas fa-tags fa-3x"></i>
+                <h2>Labels & Stickers</h2>
+                <p>Custom labels and stickers for your products.</p>
+            </div>
+
+            <!-- Service Card 5: Invitations -->
+            <div class="service-card" data-modal="modal5">
+                <i class="fas fa-envelope fa-3x"></i>
+                <h2>Invitations</h2>
+                <p>Elegant invitations for weddings, parties, and events.</p>
+            </div>
+
+            <!-- Service Card 6: T-Shirt Printing -->
+            <div class="service-card" data-modal="modal6">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <h2>T-Shirt Printing</h2>
+                <p>Custom t-shirt printing for personal or business use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1: Business Cards -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Business Cards</h2>
+            <p><strong>Details:</strong> High-quality business cards with a glossy or matte finish.</p>
+            <p><strong>Cost per Piece:</strong> $0.50</p>
+            <p><strong>Specifications:</strong> 300 GSM paper, full-color printing, rounded corners available.</p>
+            <form id="orderForm1">
+                <div class="form-group">
+                    <label for="name1">Name:</label>
+                    <input type="text" id="name1" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email1">Email:</label>
+                    <input type="email" id="email1" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="deadline1">Deadline:</label>
+                    <input type="date" id="deadline1" name="deadline" required>
+                </div>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: Posters & Banners -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Posters & Banners</h2>
+            <p><strong>Details:</strong> Large-format posters and banners for events and promotions.</p>
+            <p><strong>Cost per Piece:</strong> $5.00</p>
+            <p><strong>Specifications:</strong> Vinyl or paper material, full-color printing, waterproof options available.</p>
+            <form id="orderForm2">
+                <div class="form-group">
+                    <label for="name2">Name:</label>
+                    <input type="text" id="name2" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email2">Email:</label>
+                    <input type="email" id="email2" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="deadline2">Deadline:</label>
+                    <input type="date" id="deadline2" name="deadline" required>
+                </div>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add more modals for other services as needed -->
+
+   
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2023 PrintPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modals and Forms -->
+    <script>
+        // Get all service cards
+const serviceCards = document.querySelectorAll('.service-card');
+
+// Add click event listeners to service cards
+serviceCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const modalId = card.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+    });
+});
+
+// Get all close buttons
+const closeButtons = document.querySelectorAll('.close');
+
+// Add click event listeners to close buttons
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.style.display = 'none';
+    });
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+
+// Handle form submissions
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your order! We will contact you shortly.');
+        form.reset(); // Reset the form
+    });
+});
+    </script>
+</body>
+</html>

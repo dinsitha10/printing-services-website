@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="order-form">
+    <div class="container">
+      <h1>Place Your Order</h1>
+      <form id="orderForm">
+        <label for="product">Choose a Product:</label>
+        <select id="product" name="product">
+          <option value="Visiting Cards">Visiting Cards</option>
+          <option value="Brochures">Brochures</option>
+          <option value="Flyers">Flyers</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="design">Upload Your Design (Optional):</label>
+        <input type="file" id="design" name="design">
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Printing Services</p>
+    </div>
+  </footer>
+</body>
+</html>
